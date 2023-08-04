@@ -1,6 +1,6 @@
 # Interactive Card
 
-devsantuss.github.io/interactive-Card/](https://devsantuss.github.io/interactive-Card/)
+#### link:[ devsantuss.github.io/interactive-Card/](https://devsantuss.github.io/interactive-Card/)
 
 ![Design preview for the Interactive card details form coding challenge](./assets/design/desktop-design.jpg)
 
