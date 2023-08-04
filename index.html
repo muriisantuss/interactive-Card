@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png" />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <div class="all">
+      <!-- all do lado esquerdo -->
+      <section class="left">
+        <!-- two cards -->
+        <div class="card-container">
+          <!-- card front -->
+          <article class="card-front">
+            <img src="../assets/images/bg-card-front.png" alt="card-front" />
+
+            <!-- conteudo dentro do card front -->
+            <div class="card-content">
+              <img
+                src="./assets/images/card-logo.svg"
+                alt="card-logo"
+                class="card-logo" />
+              <h1 class="number" id="number">0000 0000 0000 0000</h1>
+
+              <!-- info card front -->
+              <div class="card_info">
+                <span id="name"> Jane Appleseed </span>
+                <span id="date">
+                  <span id="month">00</span>
+                  /
+                  <span id="year">00</span>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <section>
+            <!-- card back -->
+            <article class="card-back">
+              <img src="../assets/images/bg-card-back.png" alt="card-back" />
+              <!-- conteudo dentro do card back -->
+              <article>
+                <span id="cvc"> 000 </span>
+              </article>
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <!-- all do lado direito -->
+      <main class="right">
+        <section class="grid form-card transition">
+          <form>
+            <div class="grid inputBox">
+              <label for="card_name">Cardholder Name</label>
+              <input
+                type="text"
+                name="name-user"
+                placeholder="e.g. Jane Appleseed"
+                maxlength="42"
+                autocomplete="off"
+                class="input name-user"
+                id="card-name" />
+            </div>
+
+            <div class="grid inputBox">
+              <label for="card_number">Card number</label>
+              <input
+                type="text"
+                name="card-number"
+                oninput="space()"
+                maxlength="19"
+                autocomplete="off"
+                placeholder="e.g. 1234 5678 9123 0000"
+                class="input card-number"
+                id="card-number" />
+            </div>
+
+            <div class="grid grid-content">
+              <div class="grid flexBox">
+                <label for="exp_date">Exp. Date (MM/YY)</label>
+                <input
+                  type="number"
+                  name="card-mm"
+                  placeholder="MM"
+                  oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  minlength="2"
+                  maxlength="2"
+                  autocomplete="off"
+                  class="input card-mm"
+                  id="card-mm" />
+                <input
+                  type="number"
+                  name="card-yy"
+                  placeholder="YY"
+                  oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  minlength="2"
+                  maxlength="2"
+                  autocomplete="off"
+                  class="input card-yy"
+                  id="card-yy" />
+              </div>
+
+              <div class="grid flexBox-1">
+                <label for="card-cvc">CVC</label>
+                <input
+                  type="text"
+                  name="cvc"
+                  oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                  minlength="3"
+                  maxlength="3"
+                  autocomplete="off"
+                  placeholder="e.g. 123"
+                  class="input cvc"
+                  id="card-cvc" />
+              </div>
+            </div>
+            <div class="grid confirm">
+              <input
+                type="button"
+                class="input btn-confirm"
+                value="Confirm"
+                onclick="confirm()" />
+            </div>
+          </form>
+        </section>
+
+        <div class="thank hidden transition">
+          <img src="./assets/images/icon-complete.svg" alt="" />
+          <h1>Thank you</h1>
+          we've added your card details
+          <input
+            type="submit"
+            class="input btn-continue btn-confirm"
+            onclick="refresh()"
+            value="Continue" />
+        </div>
+      </main>
+    </div>
+
+    <script src="./style.js">
+
+
+    </script>
+  </body>
+</html>
