@@ -1,6 +1,6 @@
 # Interactive Card
 
-#### link: [meu projeto](https://muriisantuss.github.io/interactive-Card/)
+#### link: [My Project](https://muriisantuss.github.io/interactive-Card/)
 
 ![Design preview for the Interactive card details form coding challenge](./assets/design/desktop-design.jpg)
 
